@@ -21,13 +21,13 @@ A web-based application that calculates PID (Proportional-Integral-Derivative) c
 Before running the application, ensure you have Python installed on your system. The application requires the following Python packages:
 
 ```bash
-pip install flask numpy scipy control
+pip install flask numpy scipy control geneticalgorithm
 ```
 
 ## Project Structure
 
 ```
-pid-tuning-app/
+project/
 ├── app.py              # Flask backend application
 ├── templates/          # Frontend templates directory
 │   └── index.html     # Main web interface
@@ -39,19 +39,18 @@ pid-tuning-app/
 1. Clone or download this repository:
 ```bash
 git clone <repository-url>
-# or create the directory structure manually
 ```
 
 2. Install the required Python packages:
 ```bash
-pip install flask numpy scipy control
+pip install flask numpy scipy control geneticalgorithm
 ```
 
 ## Running the Application
 
 1. Navigate to the project directory:
 ```bash
-cd pid-tuning-app
+cd project
 ```
 
 2. Start the Flask server:
@@ -90,11 +89,10 @@ http://localhost:5000
 ### Backend (app.py)
 - Built with Flask
 - Uses control systems library for transfer function handling
-- Implements PID tuning rules based on pole placement
-- Provides JSON API endpoint for calculations
+- Implements PID tuning rules based on optimization of ITAE for step input
 
 ### Frontend (index.html)
-- Pure HTML/CSS/JavaScript implementation
+- HTML/CSS/JavaScript implementation
 - Responsive design for various screen sizes
 - Real-time input validation
 - Clear error messaging and loading states
@@ -123,7 +121,6 @@ Potential areas for enhancement:
 - Additional tuning methods
 - Export functionality for parameters
 - System stability analysis
-- Batch processing capability
 
 ## Troubleshooting
 
